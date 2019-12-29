@@ -1,4 +1,4 @@
-﻿namespace MTier.Domain.Enum
+﻿namespace MTierXForm.Domain.Enum
 {
     public enum TierType
     {

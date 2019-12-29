@@ -1,7 +1,4 @@
-﻿using MTier.Domain;
-using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using MTierXForm.Domain.Model;
 
 namespace MTierXForm.Repository.Interface
 {

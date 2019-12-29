@@ -1,7 +1,7 @@
-﻿using MTier.Domain.Enum;
+﻿using MTierXForm.Domain.Enum;
 using System;
 
-namespace MTier.Domain
+namespace MTierXForm.Domain.Model
 {
     public class Member
     {

@@ -1,4 +1,6 @@
-﻿using System;
+﻿using MTierXForm.Repository;
+using MTierXForm.Service;
+using System;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -10,7 +12,7 @@ namespace MTierXForm
         public App()
         {
             InitializeComponent();
-
+            DIRegistration();
             MainPage = new MainPage();
         }
 
@@ -27,6 +29,12 @@ namespace MTierXForm
         protected override void OnResume()
         {
             // Handle when your app resumes
+        }
+
+        private void DIRegistration()
+        {
+            DependencyService.Register<MemberService>();
+            DependencyService.Register<MemberRepository>();
         }
     }
 }
