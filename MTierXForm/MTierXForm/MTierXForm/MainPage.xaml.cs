@@ -8,7 +8,7 @@ using Xamarin.Forms;
 
 namespace MTierXForm
 {
-    public partial class MainPage : ContentPage
+    public partial class MainPage : BaseContentPage
     {
         public IMemberService _memberService;
         public MainPage()
@@ -17,10 +17,10 @@ namespace MTierXForm
             _memberService = DependencyService.Get<IMemberService>();
         }
 
-        private void DemoButton_Clicked(object sender, EventArgs e)
+        private async void EnterButton_Clicked(object sender, EventArgs e)
         {
-            var member = _memberService.GetMember(1);
-            DemoButton.Text = $"Is your name {member.FirstName}?";
+            //navigate to tier member info page
+            await Navigation.PushAsync(new MemberInfo());
         }
     }
 }

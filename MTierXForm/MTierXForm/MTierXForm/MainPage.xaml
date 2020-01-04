@@ -1,20 +1,16 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:local="clr-namespace:MTierXForm"
-             x:Class="MTierXForm.MainPage">
-
-    <StackLayout>
-        <!-- Place new controls here -->
+<abstraction:BaseContentPage 
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="MTierXForm.MainPage"
+    xmlns:abstraction="clr-namespace:MTierXForm">
+    <StackLayout Spacing="10" x:Name="layout" BackgroundColor="White">
         <Label Text="Welcome!" 
            HorizontalOptions="Center"
            VerticalOptions="CenterAndExpand" />
-        <Button Text="Click me and start the magic"
-                HorizontalOptions="Center"
-                Margin="10"
-                VerticalOptions="CenterAndExpand"
-                x:Name="DemoButton" 
-                Clicked="DemoButton_Clicked"></Button>
+        <Button x:Name="EnterButton" 
+                    Clicked="EnterButton_Clicked" 
+                    Text="StackLayout" VerticalOptions="Start" 
+                    HorizontalOptions="FillAndExpand" />
     </StackLayout>
-
-</ContentPage>
+</abstraction:BaseContentPage>
