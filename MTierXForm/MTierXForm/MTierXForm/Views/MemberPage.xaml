@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<abstraction:BaseContentPage 
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="MTierXForm.Views.MemberPage"
+    xmlns:abstraction="clr-namespace:MTierXForm"
+    xmlns:viewmodel="clr-namespace:MTierXForm.ViewModels">
+    <abstraction:BaseContentPage.BindingContext>
+        <viewmodel:MemberViewModel />
+    </abstraction:BaseContentPage.BindingContext>
+    <StackLayout Spacing="10" x:Name="layout" BackgroundColor="White">
+        <Label Text="{Binding Member.FirstName}" 
+           HorizontalOptions="Center"
+           VerticalOptions="CenterAndExpand" />
+        <Button x:Name="EnterBu" 
+                Clicked="EnterBu_Clicked" 
+                Text="Hello" VerticalOptions="Start"    
+                            HorizontalOptions="FillAndExpand" />
+    </StackLayout>
+</abstraction:BaseContentPage>

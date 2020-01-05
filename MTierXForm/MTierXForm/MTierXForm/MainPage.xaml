@@ -1,16 +1,24 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<abstraction:BaseContentPage 
-    xmlns="http://xamarin.com/schemas/2014/forms"
-    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    x:Class="MTierXForm.MainPage"
-    xmlns:abstraction="clr-namespace:MTierXForm">
-    <StackLayout Spacing="10" x:Name="layout" BackgroundColor="White">
-        <Label Text="Welcome!" 
-           HorizontalOptions="Center"
-           VerticalOptions="CenterAndExpand" />
-        <Button x:Name="EnterButton" 
-                    Clicked="EnterButton_Clicked" 
-                    Text="StackLayout" VerticalOptions="Start" 
-                    HorizontalOptions="FillAndExpand" />
-    </StackLayout>
-</abstraction:BaseContentPage>
+<TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
+            xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+            xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+            xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+            xmlns:android="clr-namespace:Xamarin.Forms.PlatformConfiguration.AndroidSpecific;assembly=Xamarin.Forms.Core"
+            android:TabbedPage.ToolbarPlacement="Bottom"
+            mc:Ignorable="d"
+            xmlns:views="clr-namespace:MTierXForm.Views"
+            x:Class="MTierXForm.MainPage">
+    <TabbedPage.Children>
+        <NavigationPage Title="Home">
+            <x:Arguments>
+                <views:HomePage />
+            </x:Arguments>
+        </NavigationPage>
+        <NavigationPage Title="Info">
+            <x:Arguments>
+                <views:MemberPage />
+            </x:Arguments>
+        </NavigationPage>
+    </TabbedPage.Children>
+</TabbedPage>
+
