@@ -3,11 +3,12 @@
             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-            xmlns:android="clr-namespace:Xamarin.Forms.PlatformConfiguration.AndroidSpecific;assembly=Xamarin.Forms.Core"
-            android:TabbedPage.ToolbarPlacement="Bottom"
             mc:Ignorable="d"
             xmlns:views="clr-namespace:MTierXForm.Views"
-            x:Class="MTierXForm.MainPage">
+            x:Class="MTierXForm.MainPage"
+            BarBackgroundColor="#0046B0">
+    <!--xmlns:android="clr-namespace:Xamarin.Forms.PlatformConfiguration.AndroidSpecific;assembly=Xamarin.Forms.Core"
+            android:TabbedPage.ToolbarPlacement="Bottom"-->
     <TabbedPage.Children>
         <NavigationPage Title="Home">
             <x:Arguments>
